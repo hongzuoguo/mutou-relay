@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mutou Relay · 木头接力"
+  short_description: "让 ChatGPT 网页规划与审查，由 Codex 在授权范围内实现和验证"
+  default_prompt: "使用 $mutou-relay，使用 build 模式，让 ChatGPT 网页先研究并提供来源，再规划当前任务，Codex 实施检查后由网页独立审查。"

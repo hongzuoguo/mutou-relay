@@ -1,0 +1,37 @@
+schema_version: 1
+product: mutou-relay
+workspace:
+  selection: explicit_or_codex_context
+  one_active_project: true
+chatgpt:
+  surface: chat
+  app_name: Mutou Relay
+  model_policy:
+    mode: current
+    exact_label: null
+    preferred_labels: []
+    reasoning_label: null
+    fallback: block
+  lock_selection_for_task: true
+connection:
+  provider: openai-secure-tunnel
+  profile: mutou-relay
+  transport: stdio
+  credentials_ref: mutou-relay/tunnel-runtime
+  tunnel_id: null
+workflow:
+  default_mode: build
+  approval_mode: within_authorized_scope
+  max_repair_rounds: 1
+limits:
+  max_file_bytes: 1048576
+  max_read_lines: 200
+  max_search_results: 100
+  max_response_chars: 30000
+  max_tree_depth: 6
+  tool_timeout_seconds: 15
+  max_files: 5000
+  max_snapshot_bytes: 16777216
+evidence:
+  screenshots: off
+  retention_days: 14
